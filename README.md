@@ -1,4 +1,5 @@
 # growhonsup
+![Toy example differences between FONs, unsupervised HONs, and supervised HON](https://raw.githubusercontent.com/sjkrieg/growhonsup/master/toy.png)
 Python implementation of algorithm for generating a Higher-Order Network (HON) from sequence input in a supervised setting. 
 
 This project is essentially an extension of [GrowHON](https://github.com/sjkrieg/growhon) for working with supervised data. It accepts any text file as input, and processes each line as a sequence vector. The output is a weighted adjacency list in CSV format. The output graph for this project differs from other HON models in that it creates additional sink nodes for each of the outcomes.
