@@ -176,10 +176,8 @@ class HONTree():
         for k in range(2, self.k+1):
             # get all combos of length k with label suffixes 
             combos_curr = self._get_combos(trajs, k, labels=labels, min_freq_set_prev=min_freq_set_prev)
-            print(len(combos_curr), ' combos rn')
             # compute information gain for all combos
             gains_curr, min_freq_set_prev = self._compute_gains(labels, combos_curr)
-            print(len(gains_curr), len(min_freq_set_prev))
             # keep a node if it passes the significance test
             nodes_to_keep_curr = set(gains_curr.keys())
             nodes_to_keep.append(nodes_to_keep_curr)
@@ -489,7 +487,7 @@ class HONTree():
         p1 = 1 - p0
         # base entropy
         hy = -(p0*log2(p0) + p1*log2(p1))
-        rng = np.random.default_rng()
+        rng = np.random.default_rng(777)
         
         uprime, cu0, cu1 = inq.get()
         while uprime is not None:
