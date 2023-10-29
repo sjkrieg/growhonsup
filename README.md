@@ -1,7 +1,7 @@
 # growhonsup
 Python implementation of algorithm for generating a Higher-Order Network (HON) from sequence input in a supervised setting. 
 
-This project is essentially an extension of GrowHON[https://github.com/sjkrieg] for working with supervised data. It accepts any text file as input, and processes each line as a sequence vector. The output is a weighted adjacency list in CSV format. The output graph for this project differs from other HON models in that it creates additional sink nodes for each of the outcomes.
+This project is essentially an extension of [GrowHON](https://github.com/sjkrieg) for working with supervised data. It accepts any text file as input, and processes each line as a sequence vector. The output is a weighted adjacency list in CSV format. The output graph for this project differs from other HON models in that it creates additional sink nodes for each of the outcomes.
 
 ### Core dependencies
 1. Python 3.7+
