@@ -59,7 +59,7 @@ python growhonsup.py sample_sequences.txt sample_hon_k3.txt 3 -w 4 -z 3.0
 ```
 
 ### Debugging note
-Please note that on the sample input or on small inputs, you may run this code twice and get two graphs with slightly different numbers of nodes. This is because we use a Python multiprocessing queue, so sometimes nodes are processed in different order. This means that even with a fixed random seed the noise samples taken in the information gain calculation can be slightly different. The differences in the resulting graph are very minor.
+Please note that on the sample input or other small inputs, you may run this code twice and get two graphs with slightly different numbers of nodes. This is because we use a Python multiprocessing queue, so on two program runs the same node can be processed by different workers. This means that the noise samples taken in the information gain calculation can be slightly different. This will only affect nodes that are very close to the significance threshold, so differences in the resulting graph are very minor.
 
 ## Authors
 
