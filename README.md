@@ -1,5 +1,5 @@
 # growhonsup
-<img src="https://raw.githubusercontent.com/sjkrieg/growhonsup/master/toy.png" width=50% height=50%>
+<img src="https://raw.githubusercontent.com/sjkrieg/growhonsup/master/toy.png" width=70% height=70%>
 Python implementation of algorithm for generating a Higher-Order Network (HON) from sequence input in a supervised setting. 
 
 This project is essentially an extension of [GrowHON](https://github.com/sjkrieg/growhon) for working with supervised data. It accepts any text file as input, and processes each line as a sequence vector. The output is a weighted adjacency list in CSV format. The output graph for this project differs from other HON models in that it creates additional sink nodes for each of the outcomes.
@@ -10,7 +10,7 @@ This project is essentially an extension of [GrowHON](https://github.com/sjkrieg
 3. pandas (tested on 1.4.3)
 4. tqdm (tested on 4.65.0)
 
-The key difference between this project and prior HON models is the use of an outcome variable to determine which conditional (higher-order) nodes to create in the graph. These outcomes must be supplied as part of the input. Each line in the input file should follow this template:
+The key difference between this project and prior HON models is the use of an outcome variable to determine which conditional (higher-order) nodes to create in the graph. The model additionally can learn which diagnoses are noisy or irrelevant and skip them. Outcomes (labels) must be supplied as part of the input. Each line in the input file should follow this template:
 ```
 SEQUENCE_ID 1 2 3 ... n LABEL
 ```
