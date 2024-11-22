@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 """Module to generate a higher-order network (HON) in a supervised learning setting.
 
-This script is an adaptation of GrowHON [https://github.com/sjkrieg/growhon]. It's
-a bit of a frankenstein but gets the job done.
+This script is an adaptation of GrowHON [https://github.com/sjkrieg/growhon].
 
 Overview: this program takes as a text file containing trajectories as input.
 It returns a graph---specifically, a higher-order network) as output.
@@ -239,7 +238,6 @@ class HONTree():
         if labels is not None:
             for i in tqdm(range(len(steps)-1), desc='Generating label combos for k={}...'.format(k)):
                 if min_freq_set_prev:
-                    # wow this list comprehension is a doozy, sorry
                     # basically, we are trying to generate all the combinations of elements in each line + label destinations using the itertools.combinations generator
                     # we use dict.fromkeys() to drop duplicates, since it's faster than set
                     # we ALSO use .issubset() to check if each combination meets the minimum frequency parameter
@@ -474,7 +472,7 @@ class HONTree():
         """Worker function for computing information gain.
         For a given node u and labels Y, we compute IG(Y, u) as h(Y) - h(Y|u)
         Where h(Y) is the entropy of Y and h(Y|u) is the conditional entropy of Y given u.
-        Here we also compute the z-statisitc 
+        Here we also compute the z-statistic 
         """
         def hxy(pxs, pxys):    
             hu = 0

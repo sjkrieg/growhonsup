@@ -63,9 +63,18 @@ Please note that on the sample input or other small inputs, you may run this cod
 
 ## Authors
 
-* **Steven Krieg** - (skrieg@nd.edu)
+* **Steven Krieg** - (~~skrieg@nd.edu~~ steven.j.krieg@gmail.com)
 
 ## Reference
 If you make use of this code, please cite our paper!
 
-* Paper ref TBD
+```
+@inproceedings{krieg2024representing,
+  title={Representing Outcome-driven Higher-order Dependencies in Graphs of Disease Trajectories},
+  author={Krieg, Steven J and Chawla, Nitesh V and Feldman, Keith},
+  booktitle={2024 IEEE 12th International Conference on Healthcare Informatics (ICHI)},
+  pages={11--20},
+  year={2024},
+  organization={IEEE}
+}
+```
